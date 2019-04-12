@@ -19,7 +19,11 @@ class ResultPage(driver: WebDriver) {
     }
 
     fun isPageOpened(): Boolean {
-        return bestResult?.text.toString().contains("Recommended by NASA")
+       return try {
+            bestResult?.text.toString().contains("Recommended by NASA")
+        } catch (e: Exception) {
+           false
+       }
     }
 
     fun selectDocument(selectDoc: String) {

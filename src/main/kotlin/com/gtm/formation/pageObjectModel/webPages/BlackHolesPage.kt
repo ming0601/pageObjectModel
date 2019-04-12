@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver
 import org.openqa.selenium.WebElement
 import org.openqa.selenium.support.FindBy
 import org.openqa.selenium.support.PageFactory
+import java.lang.Exception
 
 class BlackHolesPage(driver: WebDriver) {
 
@@ -15,6 +16,10 @@ class BlackHolesPage(driver: WebDriver) {
     }
 
     fun isBlackHolesPageOpened(): Boolean {
-        return pageBanner?.text.toString().contains("Black Holes")
+        return try {
+            pageBanner?.text.toString().contains("Black Holes")
+        } catch (e: Exception) {
+            false
+        }
     }
 }

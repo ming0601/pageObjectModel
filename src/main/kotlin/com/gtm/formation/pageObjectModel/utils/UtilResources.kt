@@ -8,7 +8,7 @@ object UtilResources {
 
     private var properties: Properties? = null
 
-    private fun loadProperties(): Unit {
+    private fun loadProperties() {
         try {
             properties = Properties()
             properties?.load(FileInputStream("config.properties"))
