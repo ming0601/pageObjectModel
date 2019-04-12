@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement
 import org.openqa.selenium.support.FindBy
 import org.openqa.selenium.support.PageFactory
 
-class HomePage(private val driver: WebDriver) {
+class HomePage(driver: WebDriver) {
 
     @FindBy(id = "ember888")
     private val searchBox: WebElement? = null

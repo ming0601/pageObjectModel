@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy
 import org.openqa.selenium.support.PageFactory
 import java.lang.Exception
 
-class ResultPage(private val driver: WebDriver) {
+class ResultPage(driver: WebDriver) {
 
     @FindBy(id = "best-bets")
     private val bestResult: WebElement? = null
